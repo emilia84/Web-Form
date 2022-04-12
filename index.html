@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="form.js"></script>
+</head>
+<body>
+    <h1>Web Form </h1>
+    <p> Fields with * are required</p>
+    <form id="info" action="http://www.example.com/redball/survey" method="post">
+        <fieldset id="studentInfo">           
+            <legend>Your Personal Information</legend>         
+            <div class="formRow1">
+               <label for="name">Full Name*:</label>
+               <input name="studentName" id="name" type="text" placeholder="First and last name" required />
+            </div>
+            <div class="formRow1">            
+               <label for="address">Email Address*:</label>
+               <input name="studentAdress" id="address" type="text" placeholder="someone@somewhere.com" required/>
+            </div>
+            <div class="formRow1"> 
+               <label for="school">Current study:</label>
+               <input name="studentSchool" id="school" type="text" value="Douglas College" />
+            </div>
+            <div class="formRow1"> 
+               <label for="age">Age:</label>
+               <input name="studentAge" id="age" type="number" min ="0" max="100" step="1" value="20" />
+            </div>
+        </fieldset>
+
+        <fieldset id="studentQuiz">
+            <legend>Your Quiz</legend>
+            <div class="formRow">
+               <label for="fquestion">1. What is the result of the following question?</label><br>
+               &nbsp; 2<sup>2</sup>&#215;5 &#61;
+               <input name="question" id="fquestion" type="text" />
+            </div>
+            <div class="formRow">
+               <label for="order">2. What does the acronym W3C stand for?</label>
+               <select name="orderType" id="order">
+                  <option value="order1" selected>3rd World War Coalition</option>
+                  <option value="order2">World Wide WarCraft</option>
+                  <option value="order3">World Wide Web Consortium</option>
+               </select>
+            </div> 
+            <div class="formRow"> 
+               <label for="abbreviation">3. CSS is an abbreviation of &nbsp; <input name="css-stylesheet" id="abbreviation" type="text"/>&nbsp; style sheet</label>
+            </div>
+            <div class="formRow">
+               <label>4. Select all the (scripting) languages we learn in CSIS 1280?</label><br>
+               <input type="checkbox" name="class1" value="html">HTML
+               <input type="checkbox" name="class2" value="css">CSS
+               <input type="checkbox" name="class3" value="javascript">JavaScript
+               <input type="checkbox" name="class4" value="php">PHP
+               <input type="checkbox" name="class5" value="c#">C#
+               <input type="checkbox" name="class6" value="java">Java
+            </div>          
+            <div class="formRow2">
+                <label>5. Consider the picture of a DOM structure below. Which of the following selector CANNOT be used to select all the &lt;  p &gt;elements?</label><br>
+                <input type="radio" name="element1" value="p">p<br>
+                <input type="radio" name="element1" value="h1">h1 ~ p <br>
+                <input type="radio" name="element1" value="article">article p <br>
+                <input type="radio" name="element1" value="articlep">article > p<br>
+                <input type="radio" name="element1" value="h1p">h1 + p <br>
+                <img src="images/q5.PNG" alt="question 5"/>
+            </div>
+            <div class="formRow2">
+                <label>6. Consider the picture of a DOM structure below. Which of the following selector CAN be used to select all the identified &lt; li &gt; elements?</label><br>
+                <input type="radio" name="element2" value="li">li<br>
+                <input type="radio" name="element2" value="child">li:nth-child(2n+1) <br>
+                <input type="radio" name="element2" value="2n1">ul > li:(2n+1) <br>
+                <input type="radio" name="element2" value="ul">ul > li <br>
+                <input type="radio" name="element2" value="ul-li">ul > li(2n+1)<br>
+                <img src="images/q6.PNG" alt="question 6"/>
+            </div>       
+            <label for="commBox" class="q7"> 7. Douglas College and the Coquitlam campus was named after the former Governor and Liutenant-Governor of British Columbia. What are their names? </label><br>
+            <textarea name="comName" id="commBox"></textarea>            
+        </fieldset>
+        <div id="buttons">
+            <input type="submit" value="Submit My Quiz" />
+            <input type="reset" value="Cancel" />
+        </div>         
+    </form>
+</body>
+</html>

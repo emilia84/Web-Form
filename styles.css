@@ -1,0 +1,56 @@
+*{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+body>p{
+    color: red;
+    font-weight: bold;
+}
+.formRow{
+    margin: 20px 0px;
+}
+#studentInfo, #studentQuiz, #buttons{
+    margin-bottom: 2%;
+    margin-top:2%;
+}
+.formRow2{
+    position: relative;
+    width:100%;
+    height:200px;
+    margin-bottom: 2%;
+    margin-top:2%;
+}
+img{
+    position: absolute;
+    left: 300px;
+    top: 50px;
+    bottom: 100px;
+    right: 100px;
+    height: 150px;
+
+            position:absolute;
+            bottom:0px;
+            right:0px;
+}
+
+div.formRow1{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 7px 0px;
+}
+div.formRow1 > *{
+    flex: 1 1 150px;
+}
+
+/* Legend styles */
+legend{
+    background-color: silver;
+    padding: 10px;
+}
+/* Text Area Styles */
+
+textarea {
+   margin-top: 10px;
+   height: 50px;
+   width: 98%;
+}
